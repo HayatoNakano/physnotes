@@ -1,0 +1,52 @@
+<!doctype html><html lang=ja class=h-100><head><meta name=generator content="Hugo 0.58.3"><meta charset=utf-8><meta http-equiv=content-language content=ja><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=”ROBOTS” content=”NOINDEX,NOFOLLOW,NOARCHIVE”><meta name=theme-color content=#009688><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>クライン・ゴルドン方程式 - Physics Notes</title><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Noto+Sans+JP"><link rel=stylesheet href=https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css integrity=sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX crossorigin=anonymous><link rel=stylesheet href=/css/jpn.min.css?dcc7bcd9a8><link rel=stylesheet href=/css/styles.min.css?c2a2cf87db><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['[',']'],['$$','$$']],processEscapes:true,tags:'ams',macros:{ssqrt:['\\sqrt{\\smash[b]{\\mathstrut #1}}',1],tcdegree:['\\unicode{xb0}'],tccelsius:['\\unicode{x2103}'],tcperthousand:['\\unicode{x2030}'],tcmu:['\\unicode{x3bc}'],tcohm:['\\unicode{x3a9}']}},chtml:{matchFontHeight:false,}};</script><script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script></head><body class="d-flex flex-column h-100"><div style=display:none>$$
+\def\bra#1{\mathinner{\langle{#1}|}}
+\def\ket#1{\mathinner{|{#1}\rangle}}
+\def\braket#1{\mathinner{\langle{#1}\rangle}}
+\def\Bra#1{\left\langle#1\right|}
+\def\Ket#1{\left|#1\right\rangle}
+\newcommand{\symbf}[1]{\boldsymbol{#1}}
+\newcommand{\symcal}[1]{\mathcal{#1}}
+\newcommand{\Braket}[1]{\left\langle#1\right\rangle}
+\DeclareMathOperator{\Ai}{Ai}
+\DeclareMathOperator{\Bi}{Bi}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\det}{det}
+$$</div><header><nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark"><div class=container><a class="navbar-brand josefin" href>Physics Notes</a>
+<button id=nav-toggle class=navbar-toggler type=button data-toggle=collapse data-target=#navbar aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbar><ul class="navbar-nav bd-navbar-nav mr-auto"><li class="nav-item dropdown"><a class=nav-link href=relativity/>一般相対論</a></li><li class="nav-item dropdown active"><a class=nav-link href=rqm/>相対論的量子力学</a></li><li class="nav-item dropdown"><a class=nav-link href=qft/>場の量子論</a></li></ul><form class=form-inline id=topsearch><input class="form-control mr-sm-2" autocomplete=off type=search id=searchbox placeholder=検索ワード aria-label=Search>
+<button class="btn btn-outline-primary my-2 my-sm-0" type=submit>検索</button></form></div></div></nav></header><main class="flex-shrink-0 av-nav"><div id=isIE></div><div class="main-area container"><div class=mt-3><nav aria-label=breadcrumb><ol class="breadcrumb mb-0"><li class=breadcrumb-item><a href=/>トップページ</a></li><li class=breadcrumb-item><a href=/rqm/>相対論的量子力学</a></li><li class="breadcrumb-item active">クライン・ゴルドン方程式</li></ol></nav></div><div class=m-1><div class="text-center pn-a"><a role=button class="btn btn-primary" href=/rqm/1.-naturalunit/>前のページへ</a>
+<a role=button class="btn btn-primary" href=../>一覧へ</a><a role=button class="btn btn-primary" href=/rqm/3-dirac/>次のページへ</a></div></div><article class="px-4 pb-4 px-sm-5 pb-sm-5"><div class="pt-4 pb-3 text-right article-lastmod">最終更新：2019/11/26 (火)</div><h1>クライン・ゴルドン方程式</h1><h2 id=自由粒子のschrödinger方程式の導出>自由粒子のSchrödinger方程式の導出</h2><p>非相対論的な自由粒子のエネルギーは<div class=table-responsive>$$
+E=\frac{\symbf{p}^2}{2m}
+$$</div>である。<div class=table-responsive>$$
+E \longrightarrow i \hbar \frac{\partial}{\partial t} \quad p \longrightarrow \frac{\hbar}{i} \nabla
+$$</div>と対応しているので<div class=table-responsive>$$
+i\hbar\frac{\partial\psi(\symbf{r},t)}{\partial t}=-\frac{\hbar^2}{2m}\nabla^2\psi(\symbf{r},t)
+$$</div>となり，Schrödinger方程式が得られる。</p><h2 id=クライン-ゴルドン方程式の導出>クライン・ゴルドン方程式の導出</h2><p>同様の操作を相対論的な方程式<div class=table-responsive>$$
+p^\mu p_\mu=m^2c^2
+$$</div>に対して施すことを考える。<div class=table-responsive>$$
+p^\mu\to -\hbar\partial^\mu
+$$</div>と変換すると<div class=table-responsive>$$
+\left(\partial^\mu\partial_\mu+\frac{m^2c^2}{\hbar^2}\right)\phi(x)=0
+$$</div>である。この式を<strong>クライン・ゴルドン方程式</strong>と呼ぶ。</p><p>ダランベルシアン$\square:=\partial^\mu\partial_\mu$を用いて<div class=table-responsive>$$
+\left(\square+\frac{m^2c^2}{\hbar^2}\right)\phi(x)=0
+$$</div>と表記することもある。</p><h2 id=クライン-ゴルドン方程式の諸性質>クライン・ゴルドン方程式の諸性質</h2><h3 id=ローレンツ変換に対して不変であること>ローレンツ変換に対して不変であること</h3><p>$\square=\partial^\mu\partial_\mu$はスカラーであり，$m^2c^2/\hbar^2$も明らかにスカラーであるから，クライン・ゴルドン方程式はローレンツ変換に対して不変である。</p><h3 id=確率解釈ができないこと>確率解釈ができないこと</h3><p>Schrödinger方程式のときと同様に，連続の式を導出することを考える。
+クライン・ゴルドン方程式の両辺に$\phi^\star$をかけたものから，クライン・ゴルドン方程式の両辺複素共役をとってから$\phi$をかけたものを引くと<div class=table-responsive>\begin{align*}
+&\phi^\star(x)\partial^\mu\partial_\mu\phi(x)
+-\phi(x)\partial^\mu\partial_\mu\phi^\star(x)=0\\
+\Longleftrightarrow\quad
+&\partial^\mu(\phi^\star(x)\partial_\mu\phi(x)
+-\phi(x)\partial_\mu\phi^\star(x))=0
+\end{align*}</div>であり，連続の式となっている。</p><p>次元と実数性を加味すると，確率密度$\rho$と確率の流れ$\symbf{j}$は<div class=table-responsive>\begin{align*}
+\rho&=\frac{i\hbar}{2mc^2}\left(\phi^\star\frac{\partial}{\partial t}\phi-\phi\frac{\partial}{\partial t}\phi^\star\right)\\
+\symbf{j}&=-\frac{i\hbar}{2m}(\phi^\star\nabla\phi-\phi\nabla\phi^\star)
+\end{align*}</div>となる。ゆえに$\rho$の正値性が保証されないため，これを確率密度と解釈するのは不可能である。</p><p>$\rho$には時間微分が含まれている。$\rho$の正値性が保証されないことは時間に関して2階微分であることに起因している。</p><h3 id=負のエネルギー解の存在>負のエネルギー解の存在</h3><p><div class=table-responsive>$$
+p^\mu p_mu=\frac{E^2}{c^2}-\symbf{p}^2
+$$</div>であるから<div class=table-responsive>$$
+E=\pm\sqrt{m^2c^4+c^2\symbf{p}^2}
+$$</div>と正負のエネルギー2つがついになって存在する。</p><p>このことに起因して，負のエネルギーが解として存在してしまう。</p><p>このような問題点を解決するために，次項で扱うディラック方程式が考えられた。</p></article></div><div class=m-3><div class="text-center pn-a"><a role=button class="btn btn-primary" href=/rqm/1.-naturalunit/>前のページへ</a>
+<a role=button class="btn btn-primary" href=../>一覧へ</a><a role=button class="btn btn-primary" href=/rqm/3-dirac/>次のページへ</a></div></div></main><footer class="footer mt-auto py-4 bg-dark"><div class=container>&copy; 2019 Hayato</div></footer><script src=https://code.jquery.com/jquery-3.2.1.min.js></script><script src=https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js integrity=sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U crossorigin=anonymous></script><script src=https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js integrity=sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9 crossorigin=anonymous></script><script>const isPWA=window.matchMedia('(display-mode: standalone)').matches;function isIE(){let userAgent=window.navigator.userAgent.toLowerCase();if(userAgent.indexOf('msie')!==-1||userAgent.indexOf('trident')!==-1){return true;}
+return false;}
+document.addEventListener("DOMContentLoaded",function(){if(isIE()){let footer=document.getElementById('isIE');let ieDiv=document.createElement('div');ieDiv.classList.add('ie_alert');ieDiv.innerHTML='<p>このサイトは、あなたが使用している <b>Internet Explorer</b> をサポートしていません。<br>表示が崩れたり、一部の機能が使えない恐れがあります。<br><b>新しくて高機能なブラウザ（EdgeやFirefox、Google Chrome）</b>をご利用ください。</p><a href="microsoft-edge:https://wress.github.io/guide-materials/">Microsoft Edgeで表示</a>';footer.appendChild(ieDiv);}});$(document).ready(function(){$('body').bootstrapMaterialDesign();$("a[href^='http']:not([href*='"+location.hostname+"'])").attr('target','_blank');});$('#topsearch').submit(function(){window.location.href='search/?s='+$("#searchbox").val();return false;});if("serviceWorker"in navigator){if(navigator.serviceWorker.controller){console.log("[PWA Builder] active service worker found, no need to register");}else{navigator.serviceWorker.register("/serviceworker.min.js",{scope:"./"}).then(function(reg){console.log("[PWA Builder] Service worker has been registered for scope: "+reg.scope);});}}</script></body></html>

@@ -1,0 +1,44 @@
+<!doctype html><html lang=ja class=h-100><head><meta name=generator content="Hugo 0.58.3"><meta charset=utf-8><meta http-equiv=content-language content=ja><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=”ROBOTS” content=”NOINDEX,NOFOLLOW,NOARCHIVE”><meta name=theme-color content=#009688><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>スカラー・ベクトル・テンソル - Physics Notes</title><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Noto+Sans+JP"><link rel=stylesheet href=https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css integrity=sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX crossorigin=anonymous><link rel=stylesheet href=/css/jpn.min.css?dcc7bcd9a8><link rel=stylesheet href=/css/styles.min.css?c2a2cf87db><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['[',']'],['$$','$$']],processEscapes:true,tags:'ams',macros:{ssqrt:['\\sqrt{\\smash[b]{\\mathstrut #1}}',1],tcdegree:['\\unicode{xb0}'],tccelsius:['\\unicode{x2103}'],tcperthousand:['\\unicode{x2030}'],tcmu:['\\unicode{x3bc}'],tcohm:['\\unicode{x3a9}']}},chtml:{matchFontHeight:false,}};</script><script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script></head><body class="d-flex flex-column h-100"><div style=display:none>$$
+\def\bra#1{\mathinner{\langle{#1}|}}
+\def\ket#1{\mathinner{|{#1}\rangle}}
+\def\braket#1{\mathinner{\langle{#1}\rangle}}
+\def\Bra#1{\left\langle#1\right|}
+\def\Ket#1{\left|#1\right\rangle}
+\newcommand{\symbf}[1]{\boldsymbol{#1}}
+\newcommand{\symcal}[1]{\mathcal{#1}}
+\newcommand{\Braket}[1]{\left\langle#1\right\rangle}
+\DeclareMathOperator{\Ai}{Ai}
+\DeclareMathOperator{\Bi}{Bi}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\det}{det}
+$$</div><header><nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark"><div class=container><a class="navbar-brand josefin" href>Physics Notes</a>
+<button id=nav-toggle class=navbar-toggler type=button data-toggle=collapse data-target=#navbar aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbar><ul class="navbar-nav bd-navbar-nav mr-auto"><li class="nav-item dropdown active"><a class=nav-link href=relativity/>一般相対論</a></li><li class="nav-item dropdown"><a class=nav-link href=rqm/>相対論的量子力学</a></li><li class="nav-item dropdown"><a class=nav-link href=qft/>場の量子論</a></li></ul><form class=form-inline id=topsearch><input class="form-control mr-sm-2" autocomplete=off type=search id=searchbox placeholder=検索ワード aria-label=Search>
+<button class="btn btn-outline-primary my-2 my-sm-0" type=submit>検索</button></form></div></div></nav></header><main class="flex-shrink-0 av-nav"><div id=isIE></div><div class="main-area container"><div class=mt-3><nav aria-label=breadcrumb><ol class="breadcrumb mb-0"><li class=breadcrumb-item><a href=/>トップページ</a></li><li class=breadcrumb-item><a href=/relativity/>一般相対論</a></li><li class="breadcrumb-item active">スカラー・ベクトル・テンソル</li></ol></nav></div><div class=m-1><div class="text-center pn-a"><a role=button class="btn btn-primary" href=/relativity/2-tensor1/>前のページへ</a>
+<a role=button class="btn btn-primary" href=../>一覧へ</a><a role=button class="btn btn-primary" href=/relativity/4-tensor3/>次のページへ</a></div></div><article class="px-4 pb-4 px-sm-5 pb-sm-5"><div class="pt-4 pb-3 text-right article-lastmod">最終更新：2019/11/27 (水)</div><h1>スカラー・ベクトル・テンソル</h1><h2 id=スカラー>スカラー</h2><p>座標系$S$と$S&rsquo;$である1点において観測した物理量がそれぞれ$A,A&rsquo;$であったとする。</p><p>これらの量が座標変換によらないとき，すなわち<div class=table-responsive>$$
+A=A'
+$$</div>であるとき，$A$は<strong>スカラー</strong>であるという。
+また，このような物理量が位置に依存するとき，すなわち任意の$x,x&rsquo;$において$A=A(x),A&rsquo;=A&rsquo;(x)$であるとき，$A(x)$は<strong>スカラー場</strong>であるという。</p><h2 id=ベクトル>ベクトル</h2><p>座標系$S$と$S&rsquo;$である一点において観測した4つの物理量の組がそれぞれ$A^\mu,A^{\mu\prime}$であったとする。
+このとき<div class=table-responsive>$$
+A^{\mu\prime}=\frac{\partial x^{\mu\prime}}{\partial x^\nu}A^\nu
+$$</div>というような変換則にしたがうものを<strong>反変ベクトル</strong>と呼ぶ。また，このような物理量が位置に依存するとき，すなわち任意の$x,x&rsquo;$において$B=B(x),B&rsquo;=B&rsquo;(x&rsquo;)$であるとき，$B(x)$は<strong>反変ベクトル場</strong>であるという。</p><p>一方，物理量が座標系$S$と$S&rsquo;$で$B^\mu,B^{\mu\prime}$であったとして<div class=table-responsive>$$
+B_{\mu}^{\prime}=\frac{\partial x^{\nu}}{\partial x^{\mu\prime}}A^\nu
+$$</div>というような変換則にしたがう物を，<strong>共変ベクトル</strong>という。また，このような物理量が位置に依存するとき，すなわち任意の$x,x&rsquo;$において$B=B(x),B&rsquo;=B&rsquo;(x&rsquo;)$であるとき，$B(x)$は<strong>共変ベクトル場</strong>であるという。</p><h2 id=テンソル>テンソル</h2><p>3階のテンソルを例にとって説明する。
+座標系$S$と$S&rsquo;$である一点において観測した$4^3$個の物理量の組がそれぞれ$T_{\hphantom{\lambda}\mu\nu}^\lambda$，$T_{\hphantom{\lambda}\mu\nu}^{\lambda\hphantom{\mu\nu}\prime}$であったとする。このとき<div class=table-responsive>$$
+T^{\lambda\hphantom{\mu\nu}\prime}_{\hphantom{\lambda}\mu\nu}
+=\frac{\partial x^{\lambda\prime}}{\partial x^{\alpha}}
+\frac{\partial x^{\beta}}{\partial x^{\mu\prime}}
+\frac{\partial x^{\gamma}}{\partial x^{\mu\nu}}
+T^\lambda_{\hphantom{\alpha}\beta\gamma}
+$$</div>という変換則があるとき，これを<strong>3階混合テンソル</strong>と呼ぶ。混合とついているのは上付き添字と下付き添字が混合しているからである。もし添字が上付きだけなら<strong>反変テンソル</strong>，下付きだけなら<strong>共変テンソル</strong>と呼ぶ。</p><p>また，一般に添字が$n$個のテンソルを$n$階のテンソルと呼ぶ。</p><p>前項の$g_{\mu\nu}$のように添字を入れ替えても成分の値が変わらない，すなわち<div class=table-responsive>$$
+g_{\mu\nu}(x)=g_{\nu\mu}(x)
+$$</div>を満たすような2階のテンソルを<strong>対称テンソル</strong>という。</p><p>一般に$n$個の添字をどのように入れ替えても成分の値が変わらないようなテンソルを<strong>完全対称テンソル</strong>という。</p><p>同様に，2階テンソル$f_{\mu\nu}$について<div class=table-responsive>$$
+f_{\mu\nu}(x)=-f_{\nu\mu}(x)
+$$</div>を満たすとき，<strong>反対称テンソル</strong>という。
+また，$n$この添字の順序の置換に対して，偶置換なら下の値に等しく，奇置換なら元の逆符号の値になるようなテンソルを<strong>完全反対称テンソル</strong>という。</p></article></div><div class=m-3><div class="text-center pn-a"><a role=button class="btn btn-primary" href=/relativity/2-tensor1/>前のページへ</a>
+<a role=button class="btn btn-primary" href=../>一覧へ</a><a role=button class="btn btn-primary" href=/relativity/4-tensor3/>次のページへ</a></div></div></main><footer class="footer mt-auto py-4 bg-dark"><div class=container>&copy; 2019 Hayato</div></footer><script src=https://code.jquery.com/jquery-3.2.1.min.js></script><script src=https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js integrity=sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U crossorigin=anonymous></script><script src=https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js integrity=sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9 crossorigin=anonymous></script><script>const isPWA=window.matchMedia('(display-mode: standalone)').matches;function isIE(){let userAgent=window.navigator.userAgent.toLowerCase();if(userAgent.indexOf('msie')!==-1||userAgent.indexOf('trident')!==-1){return true;}
+return false;}
+document.addEventListener("DOMContentLoaded",function(){if(isIE()){let footer=document.getElementById('isIE');let ieDiv=document.createElement('div');ieDiv.classList.add('ie_alert');ieDiv.innerHTML='<p>このサイトは、あなたが使用している <b>Internet Explorer</b> をサポートしていません。<br>表示が崩れたり、一部の機能が使えない恐れがあります。<br><b>新しくて高機能なブラウザ（EdgeやFirefox、Google Chrome）</b>をご利用ください。</p><a href="microsoft-edge:https://wress.github.io/guide-materials/">Microsoft Edgeで表示</a>';footer.appendChild(ieDiv);}});$(document).ready(function(){$('body').bootstrapMaterialDesign();$("a[href^='http']:not([href*='"+location.hostname+"'])").attr('target','_blank');});$('#topsearch').submit(function(){window.location.href='search/?s='+$("#searchbox").val();return false;});if("serviceWorker"in navigator){if(navigator.serviceWorker.controller){console.log("[PWA Builder] active service worker found, no need to register");}else{navigator.serviceWorker.register("/serviceworker.min.js",{scope:"./"}).then(function(reg){console.log("[PWA Builder] Service worker has been registered for scope: "+reg.scope);});}}</script></body></html>
